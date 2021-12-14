@@ -1,0 +1,20 @@
+id: algolia-api-key
+
+info:
+  name: Algolia API Key
+  author: Saajan
+  severity: info
+  tags: exposure,token,algolia
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "ALGOLIA_API_KEY"
+          - "ALGOLIA"
+          - "algolia"
